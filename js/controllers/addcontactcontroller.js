@@ -72,7 +72,7 @@ let ContactAddController = function ($scope, ContactService) {
 
   function addContact (personObj) {
     ContactService.addContact(personObj).then( (res) => {
-      console.log(res);
+      $scope.person = {};
     });
   }
 

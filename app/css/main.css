@@ -6387,6 +6387,12 @@ th.hide-for-touch {
   th.show-for-print {
     display: table-cell !important; } }
 
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
 body {
   background: #e2ebf3;
   position: relative; }
@@ -6398,5 +6404,24 @@ body {
 small {
   background-color: white;
   color: red; }
+
+.contactholder {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  background: white;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  list-style: none;
+  width: 300px; }
+  .contactholder:last-child {
+    margin-right: 0; }
+  .contactholder:nth-child(4n) {
+    margin-right: 0; }
+  .contactholder:nth-child(4n+1) {
+    clear: left; }
+  .contactholder li {
+    padding-left: 15px; }
 
 /*# sourceMappingURL=main.css.map */

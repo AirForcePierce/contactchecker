@@ -1,6 +1,8 @@
 // Put any @imports here
 // See Readme for a list of supported ones
 @import "foundation";
+@import "bourbon";
+@import "neat";
 
 body {
   background: #e2ebf3;
@@ -15,4 +17,17 @@ body {
 small {
   background-color: white;
   color: red;
+}
+
+.contactholder {
+  @include span-columns(3);
+  @include omega(4n);
+  background: white;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  list-style: none;
+  width: 300px;
+  li {
+    padding-left: 15px;
+  }
 }

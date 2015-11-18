@@ -121,7 +121,7 @@ var ContactAddController = function ContactAddController($scope, ContactService)
 
   function addContact(personObj) {
     ContactService.addContact(personObj).then(function (res) {
-      console.log(res);
+      $scope.person = {};
     });
   }
 };
@@ -132,17 +132,22 @@ exports['default'] = ContactAddController;
 module.exports = exports['default'];
 
 },{}],4:[function(require,module,exports){
-"use strict";
+'use strict';
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, '__esModule', {
   value: true
 });
-var ContactsController = function ContactsController() {};
+var ContactsController = function ContactsController($scope, ContactService) {
 
-ContactsController.$inject = [];
+  ContactService.getAllContacts().then(function (res) {
+    $scope.people = res.data.results;
+  });
+};
 
-exports["default"] = ContactsController;
-module.exports = exports["default"];
+ContactsController.$inject = ['$scope', 'ContactService'];
+
+exports['default'] = ContactsController;
+module.exports = exports['default'];
 
 },{}],5:[function(require,module,exports){
 "use strict";
