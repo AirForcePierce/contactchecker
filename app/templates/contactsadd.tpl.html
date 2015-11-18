@@ -1,0 +1,13 @@
+<h2>Contact Us</h2>
+
+<form ng-submit="vm.addContact(person)">
+  <input placeholder="John Smith" ng-model="person.fullName">
+  <small>{{ nameError }}</small>
+  <input placeholder="johnsmith@abc.com" ng-model="person.email">
+  <small>{{ emailError }}</small>
+  <input placeholder="http://yourwebsite.com" ng-model="person.website">
+  <small>{{ errorUrl }}</small>
+  <textarea placeholder="A nice message..." ng-model="person.messages"></textarea>
+  <small>{{ commentError }}</small>
+  <button>Submit Me</button>
+</form>
