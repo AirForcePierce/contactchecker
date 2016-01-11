@@ -1,6 +1,6 @@
 ## Welcome to My Project
 
-> I am your Readme.md file, you should probably update me.
+> Simple contact application that stores the data recieved on PARSE.
 
 
 ## Usage
